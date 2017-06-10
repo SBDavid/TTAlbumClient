@@ -6,22 +6,12 @@ import './index.css';
 
 var components = [
 	{
-		name: 'Banner',
+		template: 'SimpleList',
 		id: 1,
-		title: 'title',
-	},
-	{
-		name: 'List',
-		id: 3,
-		items: [
-			{
-				title:'title1',
-				id: 1,
-			},
-			{
-				title:'title2',
-				id: 2,
-			}
+		data: [
+			'http://ec2-52-15-52-128.us-east-2.compute.amazonaws.com/static1/img/david/1.jpg',
+			'http://ec2-52-15-52-128.us-east-2.compute.amazonaws.com/static1/img/david/2.jpg',
+			'http://ec2-52-15-52-128.us-east-2.compute.amazonaws.com/static1/img/david/3.jpg',
 		]
 	}
 ]

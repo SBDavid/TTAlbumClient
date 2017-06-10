@@ -9,7 +9,7 @@ class List extends Component {
 	  	};
 	}
 	render() {
-		var lis = this.props.items.map(item => {
+		var lis = this.props.data.map(item => {
 			return (
 				<li key={item.id}>
 					<a>

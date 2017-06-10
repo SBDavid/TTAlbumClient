@@ -10,7 +10,7 @@ class Banner extends Component {
 	render() {
 		return(
 			<div className="banner-container">
-				<span>{this.props.title}</span>
+				<span>{this.props.data}</span>
 			</div>
 		)
 	}
