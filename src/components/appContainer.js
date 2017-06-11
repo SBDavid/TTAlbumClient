@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
 
-import Banner from './Banner';
-import List from './List';
 import SimpleList from './SimpleList';
+import SimpleTitle from './SimpleTitle';
 
 const componentList = {
-  Banner: Banner,
-  List: List,
-  SimpleList: SimpleList,
+	SimpleTitle: SimpleTitle,
+  	SimpleList: SimpleList,
 };
 
 class AppContainer extends Component {
