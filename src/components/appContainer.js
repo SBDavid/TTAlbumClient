@@ -2,10 +2,12 @@ import React, { Component } from 'react';
 
 import SimpleList from './SimpleList';
 import SimpleTitle from './SimpleTitle';
+import ErrorPage from './Error';
 
 const componentList = {
 	SimpleTitle: SimpleTitle,
   	SimpleList: SimpleList,
+	Error: ErrorPage,
 };
 
 class AppContainer extends Component {

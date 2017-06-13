@@ -20,10 +20,12 @@ instance.interceptors.response.use(function (response) {
             components: 
             [
                 {
-                    template: 'SimpleTitle',
+                    template: 'Error',
                     id: 1,
                     data: {
-                        title: error.message,
+                        title: 'Api通信错误',
+                        message: error.message,
+                        detail: error.stack,
                     }
                 }
             ]
