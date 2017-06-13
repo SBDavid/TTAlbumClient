@@ -2,11 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import AppContainer from './components/appContainer';
 import registerServiceWorker from './registerServiceWorker';
-import ApiFactory from './api/factory';
+import { getAlbumById } from './api/album';
 import './index.css';
 
 
-ApiFactory.get('album/1').then(response => {
+var path = window.location.pathname;
+var user = undefined;
+var album = path.split('/')[2] || undefined;
+
+getAlbumById(user, album).then(response => {
 	
 	var data = response.data;
 	document.title = data.document.title;
