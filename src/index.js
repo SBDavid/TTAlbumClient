@@ -14,16 +14,16 @@ var data = {
 			template: 'SimpleTitle',
 			id: 1,
 			data: {
-				title: '透透美美',
+				title: process.env.REACT_APP_SECRET_CODE,
 			}
 		},
 		{
 			template: 'SimpleList',
 			id: 2,
 			data: [
-				'http://ec2-52-15-52-128.us-east-2.compute.amazonaws.com/static1/img/david/1.jpg',
-				'http://ec2-52-15-52-128.us-east-2.compute.amazonaws.com/static1/img/david/2.jpg',
-				'http://ec2-52-15-52-128.us-east-2.compute.amazonaws.com/static1/img/david/3.jpg',
+				'http://ec2-52-15-52-128.us-east-2.compute.amazonaws.com/static1/img/david/4.jpg',
+				'http://ec2-52-15-52-128.us-east-2.compute.amazonaws.com/static1/img/david/5.jpg',
+				'http://ec2-52-15-52-128.us-east-2.compute.amazonaws.com/static1/img/david/6.jpg',
 			]
 		}
 	]

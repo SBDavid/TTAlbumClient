@@ -2,13 +2,11 @@ import React, { Component } from 'react';
 import '../style/SimpleTitle.css';
 
 class SimpleTitle extends Component {
-	constructor(props) {
-	  	super(props);
-	}
 	render() {
 		return(
 			<div className="title">
                 {this.props.data.title}
+				<span>{process.env.REACT_APP_SECRET_CODE}</span>
 			</div>
 		)
 	}
