@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../style/SimpleList.css';
+import style from '../style/SimpleList.css';
 
 class SimpleList extends Component {
 	constructor(props) {
@@ -12,7 +12,7 @@ class SimpleList extends Component {
 
         const components = this.props.data.map(photoPath => {
             return(
-                <img className="photo" key={photoPath} src={photoPath} alt={photoPath}>
+                <img className={style.photo} key={photoPath} src={photoPath} alt={photoPath}>
                 </img>
             )
         });

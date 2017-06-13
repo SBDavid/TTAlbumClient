@@ -4,6 +4,21 @@
     line-height: 1rem;
     background-color: #fff;
     margin-bottom: .1rem;
-    padding-left: .1rem;
+    padding-left: .2rem;
     color: red;
+}
+
+.message {
+    font-size: .24rem;
+    line-height: 1rem;
+    background-color: #fff;
+    margin-bottom: .1rem;
+    padding-left: .2rem;
+}
+
+.detail {
+    font-size: .24rem;
+    background-color: #fff;
+    margin-bottom: .1rem;
+    padding: .5rem .2rem;
 }
