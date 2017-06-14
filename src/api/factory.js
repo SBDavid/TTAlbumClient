@@ -10,12 +10,12 @@ var instance = axios.create({
 instance.interceptors.response.use(function (response) {
     return response;
   }, function (error) {
-    if (error.response.data && error.response.data.errorcode === 601) {
+    if (error.message === "Network Error") {
         // Do something with response error 
         var errorRes = {
             data: {
                 document: {
-                    title: '服务自定义错误',
+                    title: '网络错误',
                 },
                 components: 
                 [
@@ -23,9 +23,9 @@ instance.interceptors.response.use(function (response) {
                         template: 'Error',
                         id: 1,
                         data: {
-                            title: 'Api通信错误',
+                            title: 'Api无法通信',
                             message: error.message,
-                            detail: JSON.stringify(error.response.data),
+                            detail: JSON.stringify(error.stack),
                         }
                     }
                 ]
