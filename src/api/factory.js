@@ -10,6 +10,7 @@ var instance = axios.create({
 instance.interceptors.response.use(function (response) {
     return response;
   }, function (error) {
+    console.info(error)
     if (error.message === "Network Error") {
         // Do something with response error 
         var errorRes = {

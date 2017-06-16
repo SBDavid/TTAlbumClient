@@ -3,18 +3,17 @@ import ReactDOM from 'react-dom';
 import AppContainer from './components/appContainer';
 import registerServiceWorker from './registerServiceWorker';
 import { getAlbumById } from './api/album';
+import { getPage } from './api/page';
 import './index.css';
 
 
 var path = window.location.pathname;
-var user = undefined;
-var album = path.split('/')[2] || undefined;
 
-getAlbumById(user, album).then(response => {
+getPage(path).then(response => {
 	
 	var data = response.data;
-	document.title = data.document.title;
+	document.title = data.repository.head.title;
 
-	ReactDOM.render(<AppContainer components={data.components} />, document.getElementById('root'));
+	ReactDOM.render(<AppContainer components={data.repository.body.node} />, document.getElementById('root'));
 	registerServiceWorker();
 });

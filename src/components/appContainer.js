@@ -21,10 +21,10 @@ class AppContainer extends Component {
 
 		const components = this.props.components.map((component) => {
 
-			let ComponentName = componentList[component.template]
+			let ComponentName = componentList[component.templateId]
 
 			return (
-				<ComponentName key={component.id} {...component}>
+				<ComponentName key={component.sort} {...component}>
 		  		</ComponentName>
 			)
 		});
