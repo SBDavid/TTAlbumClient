@@ -15,21 +15,24 @@ instance.interceptors.response.use(function (response) {
         // Do something with response error 
         var errorRes = {
             data: {
-                document: {
-                    title: '网络错误',
+                repository:{
+                    head: {
+                        title: '网络错误',
+                    },
+                    body: {
+                        node:[
+                            {
+                                templateId: 'Error',
+                                sort: 1,
+                                data: {
+                                    title: 'Api无法通信',
+                                    message: error.message,
+                                    detail: JSON.stringify(error.stack),
+                                }
+                            }
+                        ]
+                    },
                 },
-                components: 
-                [
-                    {
-                        template: 'Error',
-                        id: 1,
-                        data: {
-                            title: 'Api无法通信',
-                            message: error.message,
-                            detail: JSON.stringify(error.stack),
-                        }
-                    }
-                ]
             }
         }
         return Promise.resolve(errorRes);
