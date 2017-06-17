@@ -4,10 +4,17 @@ import SimpleList from './SimpleList';
 import SimpleTitle from './SimpleTitle';
 import ErrorPage from './Error';
 
+// album相关组件
+import PolaroidPaper from './album/PolaroidPaper';
+import PolaroidList from './album/PolaroidList';
+
+
 const componentList = {
 	SimpleTitle: SimpleTitle,
   	SimpleList: SimpleList,
 	Error: ErrorPage,
+	PolaroidList: PolaroidList,
+	PolaroidPaper: PolaroidPaper
 };
 
 class AppContainer extends Component {

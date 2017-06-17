@@ -1,3 +1,5 @@
+/*简单图片列表*/
+
 import React, { Component } from 'react';
 import style from '../style/SimpleTitle.css';
 

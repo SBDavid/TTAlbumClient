@@ -7,8 +7,8 @@ import { getPage } from './api/page';
 import './index.css';
 
 
-var path = window.location.pathname;
-
+var path = window.location.pathname + window.location.search;
+console.info(path)
 getPage(path).then(response => {
 	
 	var data = response.data;

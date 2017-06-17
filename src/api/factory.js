@@ -11,7 +11,7 @@ instance.interceptors.response.use(function (response) {
     return response;
   }, function (error) {
     console.info(error)
-    if (error.message === "Network Error") {
+    if (error.message === "Network Error" || error.response.status === 404) {
         // Do something with response error 
         var errorRes = {
             data: {
