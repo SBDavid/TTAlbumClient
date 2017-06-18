@@ -12,7 +12,8 @@ console.info(path)
 getPage(path).then(response => {
 	
 	var data = response.data;
-	document.title = data.repository.head.title;
+	document.title = data.repository.head.title.titleText;
+	console.info(data.repository.head.title)
 
 	ReactDOM.render(<AppContainer components={data.repository.body.node} />, document.getElementById('root'));
 	registerServiceWorker();

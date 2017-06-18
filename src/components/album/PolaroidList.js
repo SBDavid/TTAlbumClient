@@ -7,7 +7,7 @@ class PolaroidList extends Component {
     
 	render() {
 
-        const components = this.props.apiData.photos.map(photo => {
+        const components = this.props.apiData.dataSet.photos.map(photo => {
             return(
                 <div className={style.photo}>
                     <PolaroidPaper key={photo} photo={photo}>
