@@ -7,8 +7,8 @@ class SimpleTitle extends Component {
 	render() {
 		return(
 			<div className={style.title}>
-                {this.props.data.title}
-				<span>{process.env.REACT_APP_SECRET_CODE}</span>
+				{/* 如果有动态数据，则取动态数据 */}
+                {this.props.apiData ? this.props.apiData.dataSet.title : this.props.data.title}
 			</div>
 		)
 	}
