@@ -9,7 +9,7 @@ class PolaroidList extends Component {
 
         const components = this.props.apiData.dataSet.photos.map(photo => {
             return(
-                <div className={style.photo}>
+                <div className={style.photo} key={photo.id}>
                     <PolaroidPaper key={photo} photo={photo}>
                     </PolaroidPaper>
                 </div>

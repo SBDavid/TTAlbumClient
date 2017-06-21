@@ -13,8 +13,12 @@
     display: block;
 }
 
-.desc {
+.descBox {
     font-size: .4rem;
-    line-height: 1.5rem;
-    height: 1.5rem;
+    padding: .5rem 0 .5rem 0;
+}
+
+.desc {
+    padding-left: .1rem;
+    border-left: .1rem solid #bbb;
 }
